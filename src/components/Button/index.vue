@@ -4,17 +4,29 @@
 -->
 <script setup lang="ts">
 // import { ref } from 'vue';
+import { ref } from 'vue';
 import type { ButtonProps } from './types';
 defineOptions({
   name: 'TsButton',
 });
 
-defineProps<ButtonProps>();
+const buttonVariable = ref<string>('buttonVariable');
+const buttonRef = ref<HTMLButtonElement | null>(null);
+
+withDefaults(defineProps<ButtonProps>(), {
+  nativeType: 'button'
+});
+
+defineExpose({
+  buttonVariable,
+  ref: buttonRef
+});
 
 </script>
 
 <template>
   <button class="ts-button"
+    ref="buttonRef"
     :class="{
       [`ts-button--${type}`]: type,
       [`ts-button--${size}`]: size,
@@ -24,6 +36,8 @@ defineProps<ButtonProps>();
       'is-disabled': disabled,
     }"
     :disabled="disabled"
+    :autofocus="autofocus"
+    :type="nativeType"
   >
     <span>
       <slot></slot>
