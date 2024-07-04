@@ -21,7 +21,6 @@ onMounted(() => {
   <header>
     <Button type="primary"
       plain
-      native-type="submit"
       ref="buttonReference"
     >
       anniu

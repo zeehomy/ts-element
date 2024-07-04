@@ -44,5 +44,9 @@ defineExpose({
     </span>
   </button>
 </template>
-<style scoped lang="scss">
+<style scoped>
+.ts-button {
+  --main-bg-color: yellow;
+  background-color: var(--main-bg-color);
+}
 </style>

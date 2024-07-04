@@ -1,0 +1,95 @@
+:root {
+  /* colors */
+  --ts-color-white: #ffffff;
+  --ts-color-black: #000000;
+  --ts-color-primary: #409eff;
+  --ts-color-primary-light-3: #79bbff;
+  --ts-color-primary-light-5: #a0cfff;
+  --ts-color-primary-light-7: #c6e2ff;
+  --ts-color-primary-light-8: #d9ecff;
+  --ts-color-primary-light-9: #ecf5ff;
+  --ts-color-primary-dark-2: #337ecc;
+  --ts-color-success: #67c23a;
+  --ts-color-success-light-3: #95d475;
+  --ts-color-success-light-5: #b3e19d;
+  --ts-color-success-light-7: #d1edc4;
+  --ts-color-success-light-8: #e1f3d8;
+  --ts-color-success-light-9: #f0f9eb;
+  --ts-color-success-dark-2: #529b2e;
+  --ts-color-warning: #e6a23c;
+  --ts-color-warning-light-3: #eebe77;
+  --ts-color-warning-light-5: #f3d19e;
+  --ts-color-warning-light-7: #f8e3c5;
+  --ts-color-warning-light-8: #faecd8;
+  --ts-color-warning-light-9: #fdf6ec;
+  --ts-color-warning-dark-2: #b88230;
+  --ts-color-danger: #f56c6c;
+  --ts-color-danger-light-3: #f89898;
+  --ts-color-danger-light-5: #fab6b6;
+  --ts-color-danger-light-7: #fcd3d3;
+  --ts-color-danger-light-8: #fde2e2;
+  --ts-color-danger-light-9: #fef0f0;
+  --ts-color-danger-dark-2: #c45656;
+  --ts-color-error: #f56c6c;
+  --ts-color-error-light-3: #f89898;
+  --ts-color-error-light-5: #fab6b6;
+  --ts-color-error-light-7: #fcd3d3;
+  --ts-color-error-light-8: #fde2e2;
+  --ts-color-error-light-9: #fef0f0;
+  --ts-color-error-dark-2: #c45656;
+  --ts-color-info: #909399;
+  --ts-color-info-light-3: #b1b3b8;
+  --ts-color-info-light-5: #c8c9cc;
+  --ts-color-info-light-7: #dedfe0;
+  --ts-color-info-light-8: #e9e9eb;
+  --ts-color-info-light-9: #f4f4f5;
+  --ts-color-info-dark-2: #73767a;
+
+  /* border */
+  --ts-bg-color: #ffffff;
+  --ts-bg-color-page: #f2f3f5;
+  --ts-bg-color-overlay: #ffffff;
+  --ts-text-color-primary: #303133;
+  --ts-text-color-regular: #606266;
+  --ts-text-color-secondary: #909399;
+  --ts-text-color-placeholder: #a8abb2;
+  --ts-text-color-disabled: #c0c4cc;
+  --ts-border-color: #dcdfe6;
+  --ts-border-color-light: #e4e7ed;
+  --ts-border-color-lighter: #ebeef5;
+  --ts-border-color-extra-light: #f2f6fc;
+  --ts-border-color-dark: #d4d7de;
+  --ts-border-color-darker: #cdd0d6;
+  --ts-fill-color: #f0f2f5;
+  --ts-fill-color-light: #f5f7fa;
+  --ts-fill-color-lighter: #fafafa;
+  --ts-fill-color-extra-light: #fafcff;
+  --ts-fill-color-dark: #ebedf0;
+  --ts-fill-color-darker: #e6e8eb;
+  --ts-fill-color-blank: #ffffff;
+
+  /* border */
+  --ts-border-width: 1px;
+  --ts-border-style: solid;
+  --ts-border-color-hover: var(--ts-text-color-disabled);
+  --ts-border: var(--ts-border-width) var(--ts-border-style) var(--ts-border-color);
+  --ts-border-radius-base: 4px;
+  --ts-border-radius-small: 2px;
+  --ts-border-radius-round: 20px;
+  --ts-border-radius-circle: 100%;
+
+  /* font */
+  --ts-font-size-extra-large: 20px;
+  --ts-font-size-large: 18px;
+  --ts-font-size-medium: 16px;
+  --ts-font-size-base: 14px;
+  --ts-font-size-small: 13px;
+  --ts-font-size-extra-small: 12px;
+  --ts-font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "\5fae\8f6f\96c5\9ed1", Arial, sans-serif;
+  --ts-font-weight-primary: 500;
+
+  /* disabled */
+  --ts-disabled-bg-color: var(--ts-fill-color-light);
+  --ts-disabled-text-color: var(--ts-text-color-placeholder);
+  --ts-disabled-border-color: var(--ts-border-color-light);
+}
