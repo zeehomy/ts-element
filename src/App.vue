@@ -27,7 +27,7 @@ onMounted(() => {
     </Button>
   </header>
   <main>
-
+    <a href="#">link</a>
   </main>
 </template>
 

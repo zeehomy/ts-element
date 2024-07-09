@@ -45,6 +45,14 @@
   --ts-color-info-light-9: #f4f4f5;
   --ts-color-info-dark-2: #73767a;
 
+  /* --colors: {
+    primary: #409eff,
+    success: #67c23a,
+    warning: #e6a23c,
+    danger: #f56c6c,
+    info: #909399
+  } */
+
   /* border */
   --ts-bg-color: #ffffff;
   --ts-bg-color-page: #f2f3f5;
