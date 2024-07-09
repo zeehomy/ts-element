@@ -1,19 +1,19 @@
 .vk-button {
-  --vk-button-font-weight: var(--vk-font-weight-primary);
-  --vk-button-border-color: var(--vk-border-color);
-  --vk-button-bg-color: var(--vk-fill-color-blank);
-  --vk-button-text-color: var(--vk-text-color-regular);
-  --vk-button-disabled-text-color: var(--vk-disabled-text-color);
-  --vk-button-disabled-bg-color: var(--vk-fill-color-blank);
-  --vk-button-disabled-border-color: var(--vk-border-color-light);
-  --vk-button-hover-text-color: var(--vk-color-primary);
-  --vk-button-hover-bg-color: var(--vk-color-primary-light-9);
-  --vk-button-hover-border-color: var(--vk-color-primary-light-7);
-  --vk-button-active-text-color: var(--vk-button-hover-text-color);
-  --vk-button-active-border-color: var(--vk-color-primary);
-  --vk-button-active-bg-color: var(--vk-button-hover-bg-color);
-  --vk-button-outline-color: var(--vk-color-primary-light-5);
-  --vk-button-active-color: var(--vk-text-color-primary);
+  --ts-button-font-weight: var(--ts-font-weight-primary);
+  --ts-button-border-color: var(--ts-border-color);
+  --ts-button-bg-color: var(--ts-fill-color-blank);
+  --ts-button-text-color: var(--ts-text-color-regular);
+  --ts-button-disabled-text-color: var(--ts-disabled-text-color);
+  --ts-button-disabled-bg-color: var(--ts-fill-color-blank);
+  --ts-button-disabled-border-color: var(--ts-border-color-light);
+  --ts-button-hover-text-color: var(--ts-color-primary);
+  --ts-button-hover-bg-color: var(--ts-color-primary-light-9);
+  --ts-button-hover-border-color: var(--ts-color-primary-light-7);
+  --ts-button-active-text-color: var(--ts-button-hover-text-color);
+  --ts-button-active-border-color: var(--ts-color-primary);
+  --ts-button-active-bg-color: var(--ts-button-hover-bg-color);
+  --ts-button-outline-color: var(--ts-color-primary-light-5);
+  --ts-button-active-color: var(--ts-text-color-primary);
 }
 .vk-button {
   display: inline-flex;
@@ -23,45 +23,45 @@
   height: 32px;
   white-space: nowrap;
   cursor: pointer;
-  color: var(--vk-button-text-color);
+  color: var(--ts-button-text-color);
   text-align: center;
   box-sizing: border-box;
   outline: none;
   transition: .1s;
-  font-weight: var(--vk-button-font-weight);
+  font-weight: var(--ts-button-font-weight);
   user-select: none;
   vertical-align: middle;
   -webkit-appearance: none;
-  background-color: var(--vk-button-bg-color);
-  border: var(--vk-border);
-  border-color: var(--vk-button-border-color);
+  background-color: var(--ts-button-bg-color);
+  border: var(--ts-border);
+  border-color: var(--ts-button-border-color);
   padding: 8px 15px;
-  font-size: var(--vk-font-size-base);
-  border-radius: var(--vk-border-radius-base);
+  font-size: var(--ts-font-size-base);
+  border-radius: var(--ts-border-radius-base);
   & + & {
     margin-left: 12px;
   }
   &:hover,
   &:focus {
-    color: var(--vk-button-hover-text-color);
-    border-color: var(--vk-button-hover-border-color);
-    background-color: var(--vk-button-hover-bg-color);
+    color: var(--ts-button-hover-text-color);
+    border-color: var(--ts-button-hover-border-color);
+    background-color: var(--ts-button-hover-bg-color);
     outline: none;    
   }
   &:active {
-    color: var(--vk-button-active-text-color);
-    border-color: var(--vk-button-active-border-color);
-    background-color: var(--vk-button-active-bg-color);
+    color: var(--ts-button-active-text-color);
+    border-color: var(--ts-button-active-border-color);
+    background-color: var(--ts-button-active-bg-color);
     outline: none;
   }
   &.is-plain {
-    --vk-button-hover-text-color: var(--vk-color-primary);
-    --vk-button-hover-bg-color: var(--vk-fill-color-blank);
-    --vk-button-hover-border-color: var(--vk-color-primary);    
+    --ts-button-hover-text-color: var(--ts-color-primary);
+    --ts-button-hover-bg-color: var(--ts-fill-color-blank);
+    --ts-button-hover-border-color: var(--ts-color-primary);    
   }
   /*round*/
   &.is-round {
-    border-radius: var(--vk-border-radius-round);
+    border-radius: var(--ts-border-radius-round);
   }
   /*circle*/
   &.is-circle {
@@ -72,11 +72,11 @@
   &.is-disabled, &.is-disabled:hover, &.is-disabled:focus, 
   &[disabled], &[disabled]:hover, &[disabled]:focus 
   {
-    color: var(--vk-button-disabled-text-color);
+    color: var(--ts-button-disabled-text-color);
     cursor: not-allowed;
     background-image: none;
-    background-color: var(--vk-button-disabled-bg-color);
-    border-color: var(--vk-button-disabled-border-color);
+    background-color: var(--ts-button-disabled-bg-color);
+    border-color: var(--ts-button-disabled-border-color);
   }
   [class*=vk-icon] + span {
     margin-left: 6px;
@@ -84,7 +84,7 @@
 }
 /* @each $val in primary,success,warning,info,danger {
   .ts-button--$(val) {
-    --vk-button-text-color: var(--vk-color-white);
+    --ts-button-text-color: var(--ts-color-white);
 
   }
 } */
