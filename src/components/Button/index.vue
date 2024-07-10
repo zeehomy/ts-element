@@ -45,8 +45,8 @@ defineExpose({
   </button>
 </template>
 <style scoped>
-.ts-button {
+/* .ts-button {
   --main-bg-color: yellow;
   background-color: var(--main-bg-color);
-}
+} */
 </style>
