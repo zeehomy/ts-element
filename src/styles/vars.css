@@ -2,6 +2,18 @@
   /* colors */
   --ts-color-white: #ffffff;
   --ts-color-black: #000000;
+
+  @each $buttonType, $colorValue in (primary, success), (#409eff, #67c23a) {
+    --ts-2-color-$(buttonType): $(colorValue);
+    
+    @for $i from 3 to 9 by 2 {
+      --ts-2-color-$(buttonType)-light-$(i): $(colorValue);
+    }
+
+    --ts-2-color-$(buttonType)-light-8: $(colorValue);
+    --ts-2-color-$(buttonType)-dark-2: $(colorValue);
+  }
+
   --ts-color-primary: #409eff;
   --ts-color-primary-light-3: #79bbff;
   --ts-color-primary-light-5: #a0cfff;

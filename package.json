@@ -26,6 +26,7 @@
     "eslint-plugin-vue": "^9.23.0",
     "npm-run-all2": "^6.2.0",
     "postcss-each": "^1.1.0",
+    "postcss-for": "^2.1.1",
     "typescript": "~5.4.0",
     "unplugin-vue-macros": "^2.9.5",
     "vite": "^5.3.1",

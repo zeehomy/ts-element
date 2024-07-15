@@ -5,6 +5,7 @@
 /* eslint-env node */
 module.exports = {
   plugins: [
-    require('postcss-each')
+    require('postcss-each'),
+    require('postcss-for')
   ]
 };
