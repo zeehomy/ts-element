@@ -3,67 +3,25 @@
   --ts-color-white: #ffffff;
   --ts-color-black: #000000;
 
-  @each $buttonType, $colorValue in (primary, success), (#409eff, #67c23a) {
-    --ts-2-color-$(buttonType): $(colorValue);
-    
-    @for $i from 3 to 9 by 2 {
-      --ts-2-color-$(buttonType)-light-$(i): $(colorValue);
-    }
-
-    --ts-2-color-$(buttonType)-light-8: $(colorValue);
-    --ts-2-color-$(buttonType)-dark-2: $(colorValue);
-  }
-
-  --ts-color-primary: #409eff;
-  --ts-color-primary-light-3: #79bbff;
-  --ts-color-primary-light-5: #a0cfff;
-  --ts-color-primary-light-7: #c6e2ff;
-  --ts-color-primary-light-8: #d9ecff;
-  --ts-color-primary-light-9: #ecf5ff;
-  --ts-color-primary-dark-2: #337ecc;
-  --ts-color-success: #67c23a;
-  --ts-color-success-light-3: #95d475;
-  --ts-color-success-light-5: #b3e19d;
-  --ts-color-success-light-7: #d1edc4;
-  --ts-color-success-light-8: #e1f3d8;
-  --ts-color-success-light-9: #f0f9eb;
-  --ts-color-success-dark-2: #529b2e;
-  --ts-color-warning: #e6a23c;
-  --ts-color-warning-light-3: #eebe77;
-  --ts-color-warning-light-5: #f3d19e;
-  --ts-color-warning-light-7: #f8e3c5;
-  --ts-color-warning-light-8: #faecd8;
-  --ts-color-warning-light-9: #fdf6ec;
-  --ts-color-warning-dark-2: #b88230;
-  --ts-color-danger: #f56c6c;
-  --ts-color-danger-light-3: #f89898;
-  --ts-color-danger-light-5: #fab6b6;
-  --ts-color-danger-light-7: #fcd3d3;
-  --ts-color-danger-light-8: #fde2e2;
-  --ts-color-danger-light-9: #fef0f0;
-  --ts-color-danger-dark-2: #c45656;
-  --ts-color-error: #f56c6c;
-  --ts-color-error-light-3: #f89898;
-  --ts-color-error-light-5: #fab6b6;
-  --ts-color-error-light-7: #fcd3d3;
-  --ts-color-error-light-8: #fde2e2;
-  --ts-color-error-light-9: #fef0f0;
-  --ts-color-error-dark-2: #c45656;
-  --ts-color-info: #909399;
-  --ts-color-info-light-3: #b1b3b8;
-  --ts-color-info-light-5: #c8c9cc;
-  --ts-color-info-light-7: #dedfe0;
-  --ts-color-info-light-8: #e9e9eb;
-  --ts-color-info-light-9: #f4f4f5;
-  --ts-color-info-dark-2: #73767a;
-
-  /* --colors: {
+  /* 必须要有结尾分号 */
+  --colorMap: (
     primary: #409eff,
     success: #67c23a,
     warning: #e6a23c,
     danger: #f56c6c,
     info: #909399
-  } */
+  );
+
+  @each $buttonType, $colorValue in var(--colorMap) {
+    --ts-color-$(buttonType): $(colorValue);
+    
+    @for $i from 3 to 9 by 2 {
+      --ts-color-$(buttonType)-light-$(i): mix(#fff, $(colorValue), .$(i));
+    }
+
+    --ts-color-$(buttonType)-light-8: mix(#fff, $(colorValue), .8);
+    --ts-color-$(buttonType)-dark-2: mix(#000, $(colorValue), .2);
+  }
 
   /* border */
   --ts-bg-color: #ffffff;
