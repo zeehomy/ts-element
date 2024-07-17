@@ -3,7 +3,6 @@
  * @FilePath: \ts-element\src\components\Button\index.vue
 -->
 <script setup lang="ts">
-// import { ref } from 'vue';
 import { ref } from 'vue';
 import type { ButtonProps } from './types';
 defineOptions({

@@ -3,8 +3,10 @@
  * @FilePath: \ts-element\src\App.vue
 -->
 <script setup lang="ts">
-import { ref,onMounted } from 'vue';
+import { ref, onMounted } from 'vue';
 import Button from './components/Button/index.vue';
+import Collapse from './components/Collapse/index.vue';
+import CollapseItem from './components/Collapse/CollapseItem.vue';
 import type { ButtonInstance } from './components/Button/types';
 
 const buttonReference = ref<ButtonInstance | null>(null);
@@ -45,6 +47,33 @@ onMounted(() => {
     <Button type="info" plain>Info</Button>
     <Button type="warning" plain>Warning</Button>
     <Button type="danger" plain>Danger</Button><br/><br/>
+
+    <Collapse>
+      <CollapseItem name="a"
+        title="nice title a"
+      >
+        <div>
+          this is a test content
+        </div>
+      </CollapseItem>
+      <CollapseItem name="b">
+        <template #title>
+          <h2>slot title b</h2>
+        </template>
+        <h1>content h1</h1>
+        <div>
+          this is a test content b
+        </div>
+      </CollapseItem>
+      <CollapseItem name="c"
+        title="title c disabled"
+        disabled
+      >
+        <div>
+          this is a disabled content c
+        </div>
+      </CollapseItem>
+    </Collapse>
   </main>
 </template>
 
