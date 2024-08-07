@@ -6,9 +6,15 @@ import type { Ref, InjectionKey } from 'vue';
 
 export type collapseItemNameType = string | number;
 
-// export interface CollapseProps {
-//   accordion?: boolean;
-// }
+export interface CollapseProps {
+  accordion?: boolean;
+  modelValue: collapseItemNameType[];
+}
+
+export interface CollapseEmits {
+  (e: 'update:modelValue', value: collapseItemNameType[]): void;
+  (e: 'change', value: collapseItemNameType[]): void;
+}
 
 export interface CollapseItemProps {
   name: collapseItemNameType;

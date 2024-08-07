@@ -11,6 +11,8 @@ import type { ButtonInstance } from './components/Button/types';
 
 const buttonReference = ref<ButtonInstance | null>(null);
 
+const activeNames = ref(['a']);
+
 onMounted(() => {
   if (buttonReference.value) {
     console.log('buttonReference buttonVariable', buttonReference.value.buttonVariable);
@@ -48,7 +50,9 @@ onMounted(() => {
     <Button type="warning" plain>Warning</Button>
     <Button type="danger" plain>Danger</Button><br/><br/>
 
-    <Collapse>
+    <Collapse v-model="activeNames"
+      accordion
+    >
       <CollapseItem name="a"
         title="nice title a"
       >
@@ -73,6 +77,7 @@ onMounted(() => {
           this is a disabled content c
         </div>
       </CollapseItem>
+      {{ activeNames }}
     </Collapse>
   </main>
 </template>
