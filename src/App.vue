@@ -11,13 +11,19 @@ import type { ButtonInstance } from './components/Button/types';
 
 const buttonReference = ref<ButtonInstance | null>(null);
 
-const activeNames = ref(['a']);
+const activeNames = ref(['a', 'b']);
 
 onMounted(() => {
   if (buttonReference.value) {
     console.log('buttonReference buttonVariable', buttonReference.value.buttonVariable);
     console.log('buttonReference ref', buttonReference.value.ref);
   }
+
+  setTimeout(() => {
+
+    activeNames.value = ['a'];
+
+  }, 2000);
 })
 </script>
 

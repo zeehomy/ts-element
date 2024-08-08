@@ -3,7 +3,7 @@
  * @FilePath: \ts-element\src\components\Collapse\index.vue
 -->
 <script setup lang="ts">
-import { ref, provide } from 'vue';
+import { ref, provide, watch } from 'vue';
 import type { collapseItemNameType, CollapseProps, CollapseEmits } from './types';
 import { collapseCotextKey } from './types';
 
@@ -20,6 +20,11 @@ const {
 
 // const model = defineModel();
 const emits = defineEmits<CollapseEmits>();
+
+// 侦听器
+watch(() => props.modelValue, () => {
+  activeNamesArr.value = props.modelValue;
+});
 
 const activeNamesArr = ref<collapseItemNameType[]>(modelValue);
 

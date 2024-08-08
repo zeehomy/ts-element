@@ -42,6 +42,10 @@ const handleClickCollapseItemHeader = (collapseItemName: collapseItemNameType) =
     }"
   >
     <div class="ts-collapse-item__header"
+      :class="{
+        'is-disabled': disabled,
+        'is-active': isActiveCollapseItem
+      }"
       :id="`item-header-${name}`"
       @click="handleClickCollapseItemHeader(name)"
     >
@@ -49,12 +53,14 @@ const handleClickCollapseItemHeader = (collapseItemName: collapseItemNameType) =
         {{ title }}
       </slot>
     </div>
-    <div class="ts-collapse-item__content"
-      :id="`item-content-${name}`"
-      v-show="isActiveCollapseItem"
-    >
-      <slot></slot>
-    </div>
+    <Transition name="fade">
+      <div class="ts-collapse-item__content"
+        :id="`item-content-${name}`"
+        v-show="isActiveCollapseItem"
+      >
+        <slot></slot>
+      </div>
+    </Transition>
   </div>
 </template>
 <style scoped>
