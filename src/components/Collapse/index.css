@@ -47,14 +47,18 @@
   font-size: var(--ts-collapse-content-font-size);
   color: var(--ts-collapse-content-text-color);
   border-bottom: 1px solid var(--ts-collapse-border-color);
-  padding-bottom: 25px;
+  /* padding-bottom: 25px; */
 }
 
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s ease;
+/* .slide-enter-to, .slide-leave-from {
+  height: 60px;
+} */
+
+.slide-enter-active,
+.slide-leave-active {
+  transition: height 1s ease;
 }
-.fade-enter-from,
+/* .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
-}
+} */

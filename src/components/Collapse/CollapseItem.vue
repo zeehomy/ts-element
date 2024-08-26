@@ -33,6 +33,25 @@ const handleClickCollapseItemHeader = (collapseItemName: collapseItemNameType) =
 
     handleClickCollapseItem && handleClickCollapseItem(collapseItemName);
 };
+
+const transitionEvents: Record<string, (el: HTMLElement) => void> = {
+  // beforeEnter(el) {
+  //   el.style.height = '0';
+  // },
+  enter(el) {
+    el.style.height = `${el.scrollHeight}px`;
+  },
+  // onLeave(el) {
+    
+  // }
+  beforeLeave(el) {
+    el.style.height = `${el.scrollHeight}px`;
+  },
+  leave(el) {
+    el.style.height = '0';
+  }
+};
+
 </script>
 
 <template>
@@ -53,7 +72,9 @@ const handleClickCollapseItemHeader = (collapseItemName: collapseItemNameType) =
         {{ title }}
       </slot>
     </div>
-    <Transition name="fade">
+    <Transition name="slide"
+      v-on="transitionEvents"
+    >
       <div class="ts-collapse-item__content"
         :id="`item-content-${name}`"
         v-show="isActiveCollapseItem"
