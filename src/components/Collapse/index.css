@@ -39,6 +39,11 @@
     }
   }
 }
+
+.ts-collapse-item__content-wrapper {
+  overflow: hidden;
+}
+
 .ts-collapse-item__content {
   will-change: height;
   background-color: var(--ts-collapse-content-bg-color);

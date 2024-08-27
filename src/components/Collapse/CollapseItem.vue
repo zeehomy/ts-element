@@ -39,16 +39,17 @@ const transitionEvents: Record<string, (el: HTMLElement) => void> = {
   //   el.style.height = '0';
   // },
   enter(el) {
-    el.style.height = `${el.scrollHeight}px`;
+    el.style.height = `${el.scrollHeight}px`;   // 导致有内联样式
+    // el.style.overflow = 'hidden';
   },
   // onLeave(el) {
     
   // }
-  beforeLeave(el) {
+  beforeLeave(el) {                             // 具有弥补默认阶段（默认展开）的作用
     el.style.height = `${el.scrollHeight}px`;
   },
   leave(el) {
-    el.style.height = '0';
+    el.style.height = '0';    // 有内联样式，需要内联改变
   }
 };
 
@@ -75,11 +76,14 @@ const transitionEvents: Record<string, (el: HTMLElement) => void> = {
     <Transition name="slide"
       v-on="transitionEvents"
     >
-      <div class="ts-collapse-item__content"
-        :id="`item-content-${name}`"
+      <div class="ts-collapse-item__content-wrapper"
         v-show="isActiveCollapseItem"
       >
-        <slot></slot>
+        <div class="ts-collapse-item__content"
+          :id="`item-content-${name}`"
+        >
+          <slot></slot>
+        </div>
       </div>
     </Transition>
   </div>
