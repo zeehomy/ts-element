@@ -7,6 +7,7 @@ import { ref, onMounted } from 'vue';
 import Button from './components/Button/index.vue';
 import Collapse from './components/Collapse/index.vue';
 import CollapseItem from './components/Collapse/CollapseItem.vue';
+import Icon from './components/Icon/index.vue';
 import type { ButtonInstance } from './components/Button/types';
 
 const buttonReference = ref<ButtonInstance | null>(null);
@@ -85,6 +86,8 @@ onMounted(() => {
       </CollapseItem>
       {{ activeNames }}
     </Collapse>
+
+    <Icon icon="arrow-up" size="2xl" spin/>
   </main>
 </template>
 
