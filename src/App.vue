@@ -13,6 +13,7 @@ import type { ButtonInstance } from './components/Button/types';
 const buttonReference = ref<ButtonInstance | null>(null);
 
 const activeNames = ref(['a', 'b']);
+const sizeString = ref<any>('3x');
 
 onMounted(() => {
   if (buttonReference.value) {
@@ -23,6 +24,7 @@ onMounted(() => {
   setTimeout(() => {
 
     activeNames.value = ['a'];
+    sizeString.value = '2xl';
 
   }, 2000);
 })
@@ -87,7 +89,12 @@ onMounted(() => {
       {{ activeNames }}
     </Collapse>
 
-    <Icon icon="arrow-up" size="2xl" spin/>
+    <Icon icon="arrow-up"
+      :size="sizeString"
+      spin
+      type="danger"
+      color="#0e7a0d"
+    />
   </main>
 </template>
 

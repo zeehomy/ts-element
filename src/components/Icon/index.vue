@@ -3,20 +3,31 @@
  * @FilePath: \ts-element\src\components\Icon\index.vue
 -->
 <script setup lang="ts">
-// import { ref } from 'vue';
-import { FontAwesomeIcon, type FontAwesomeIconProps } from '@fortawesome/vue-fontawesome'
-// import type { ButtonProps } from './types';
+import { computed } from 'vue';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import { omit } from 'lodash-es';
+import type { IconProps } from './types';
 defineOptions({
   name: 'TsIcon',
   inheritAttrs: false
 });
-defineProps<FontAwesomeIconProps>();
+const props = defineProps<IconProps>();
+const fontIconProps = computed(() => {
 
+  return omit(props, ['type', 'color']);
+});
 </script>
 
 <template>
-  <i class="ts-icon">
-    <FontAwesomeIcon v-bind="$props"/>
+  <i class="ts-icon"
+    :class="{
+      [`ts-icon--${type}`]: type
+    }"
+    :style="{
+      color
+    }"
+  >
+    <FontAwesomeIcon v-bind="fontIconProps"/>
   </i>
 </template>
 <style scoped>
