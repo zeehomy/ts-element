@@ -4,6 +4,7 @@
 -->
 <script setup lang="ts">
 import { ref, inject, computed } from 'vue';
+import Icon from '../Icon/index.vue';
 import type { CollapseItemProps, collapseItemNameType, CollapseCotext } from './types';
 import { collapseCotextKey  } from './types';
 
@@ -72,6 +73,9 @@ const transitionEvents: Record<string, (el: HTMLElement) => void> = {
       <slot name="title">
         {{ title }}
       </slot>
+      <Icon class="ts-collapse-item__header-icon"
+        icon="angle-right"
+      />
     </div>
     <Transition name="slide"
       v-on="transitionEvents"

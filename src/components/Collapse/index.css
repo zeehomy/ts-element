@@ -34,9 +34,15 @@
   }
   &.is-active {
     border-bottom-color: transparent;
-    .header-angle {
+
+    /*  */
+    .ts-collapse-item__header-icon {
       transform: rotate(90deg);
     }
+  }
+
+  .ts-collapse-item__header-icon {
+    transition: transform var(--ts-transition-duration);
   }
 }
 
@@ -61,7 +67,7 @@
 
 .slide-enter-active,
 .slide-leave-active {
-  transition: height 1s ease;
+  transition: height var(--ts-transition-duration) ease;
 }
 /* .fade-enter-from,
 .fade-leave-to {

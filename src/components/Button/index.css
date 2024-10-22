@@ -78,6 +78,8 @@
     background-color: var(--ts-button-disabled-bg-color);
     border-color: var(--ts-button-disabled-border-color);
   }
+  /*给 icon和span间添加间距*/
+  /* 属性值值选择器，匹配紧接在class属性以ts-icon开头的标签之后的span*/
   [class*=ts-icon] + span {
     margin-left: 6px;
   }
@@ -108,14 +110,14 @@
     --ts-button-active-text-color: var(--ts-color-white);
   }
 }
-.vk-button--large {
+.ts-button--large {
   --ts-button-size: 40px;
   height: var(--ts-button-size);
   padding: 12px 19px;
   font-size: var(--ts-font-size-base);
   border-radius: var(--ts-border-radius-base);
 }
-.vk-button--small {
+.ts-button--small {
   --ts-button-size: 24px;
   height: var(--ts-button-size);
   padding: 5px 11px;

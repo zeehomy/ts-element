@@ -70,4 +70,8 @@
   --ts-disabled-bg-color: var(--ts-fill-color-light);
   --ts-disabled-text-color: var(--ts-text-color-placeholder);
   --ts-disabled-border-color: var(--ts-border-color-light);
+
+  /* animation */
+  --ts-transition-duration: .3s;
+  --ts-transition-duration-fast: .2s;
 }

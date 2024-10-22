@@ -9,7 +9,7 @@ import { omit } from 'lodash-es';
 import type { IconProps } from './types';
 defineOptions({
   name: 'TsIcon',
-  inheritAttrs: false
+  inheritAttrs: false     // 禁止父组件传递的属性透传到子组件
 });
 const props = defineProps<IconProps>();
 const fontIconProps = computed(() => {
@@ -26,6 +26,7 @@ const fontIconProps = computed(() => {
     :style="{
       color
     }"
+    v-bind="{ ...$attrs }"
   >
     <FontAwesomeIcon v-bind="fontIconProps"/>
   </i>
