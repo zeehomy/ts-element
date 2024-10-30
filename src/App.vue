@@ -3,7 +3,7 @@
  * @FilePath: \ts-element\src\App.vue
 -->
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, inject } from 'vue';
 import Button from './components/Button/index.vue';
 import Collapse from './components/Collapse/index.vue';
 import CollapseItem from './components/Collapse/CollapseItem.vue';
@@ -14,6 +14,9 @@ const buttonReference = ref<ButtonInstance | null>(null);
 
 const activeNames = ref(['a', 'b']);
 const sizeString = ref<any>('3x');
+
+const globalProvide = inject('i18n');
+console.log('globalProvide', globalProvide);
 
 onMounted(() => {
   if (buttonReference.value) {
@@ -105,6 +108,8 @@ onMounted(() => {
       color="#0e7a0d"
     />
   </main>
+  <div>{{ $translate('greetings.hello') }}</div>
+  <ts-button>ts button</ts-button>
 </template>
 
 <style scoped>
