@@ -4,7 +4,7 @@
 -->
 <script setup lang="ts">
 import { ref, onMounted, inject } from 'vue';
-import Button from './components/Button/index.vue';
+// import Button from './components/Button/index.vue';
 import Collapse from './components/Collapse/index.vue';
 import CollapseItem from './components/Collapse/CollapseItem.vue';
 import Icon from './components/Icon/index.vue';
@@ -110,6 +110,7 @@ onMounted(() => {
   </main>
   <div>{{ $translate('greetings.hello') }}</div>
   <ts-button>ts button</ts-button>
+  <TsButton type="primary">TsButton</TsButton>
 </template>
 
 <style scoped>

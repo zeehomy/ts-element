@@ -12,6 +12,8 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 import plugins from './test.plugin';
 
+import TsElement, { Button } from './index';
+
 library.add(fas);
 
 createApp(App)
@@ -20,4 +22,6 @@ createApp(App)
       hello: 'Bonjour!'
     }
   })
+  .use(TsElement)
+  .use(Button)
   .mount('#app');

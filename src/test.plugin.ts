@@ -27,7 +27,7 @@ const plugins: Plugin = {
     app.provide('i18n', options);
 
     // 全局组件
-    app.component('ts-button', Button);
+    // app.component('ts-button', Button);
   }
 };
 
