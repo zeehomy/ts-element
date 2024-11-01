@@ -43,7 +43,8 @@ export default defineConfig({
         // 提供一个全局变量
         globals: {
           vue: 'Vue',
-        }
+        },
+        exports: 'named'
       },
     },
   }
