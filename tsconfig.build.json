@@ -1,6 +1,6 @@
 {
   "extends": "@vue/tsconfig/tsconfig.dom.json",
-  "include": ["src/index.ts", "src/componentd/**/*", "src/hooks/**/*"],
+  "include": ["src/index.ts", "src/components/**/*", "src/hooks/**/*"],
   // "exclude": ["src/**/__tests__/*"],
   "compilerOptions": {
     "baseUrl": ".",
