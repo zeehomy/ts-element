@@ -6,12 +6,13 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/ts-element.umd.cjs",
-  "module": "./dist/ts-element.js",
+  "main": "./dist/umd/ts-element.umd.cjs",
+  "module": "./dist/es/ts-element.js",
+  "types": "./dist/types/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/ts-element.ts",
-      "require": "./dist/ts-element.umd.cjs"
+      "import": "./dist/es/ts-element.ts",
+      "require": "./dist/es/ts-element.umd.cjs"
     },
     "./style.css": "./dist/style.css"
   },
