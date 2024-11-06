@@ -1,11 +1,8 @@
 {
   "extends": "@vue/tsconfig/tsconfig.dom.json",
   "include": ["src/index.ts", "src/componentd/**/*", "src/hooks/**/*"],
-  "exclude": ["src/**/__tests__/*"],
+  // "exclude": ["src/**/__tests__/*"],
   "compilerOptions": {
-    "composite": true,
-    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
-
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
