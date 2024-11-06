@@ -11,10 +11,11 @@
   "types": "./dist/types/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/es/ts-element.ts",
-      "require": "./dist/es/ts-element.umd.cjs"
+      "import": "./dist/es/ts-element.js",
+      "require": "./dist/umd/ts-element.umd.cjs",
+      "types": "./dist/types/index.d.ts"
     },
-    "./style.css": "./dist/style.css"
+    "./style.css": "./dist/es/index.css"
   },
   "scripts": {
     "dev": "vite",
