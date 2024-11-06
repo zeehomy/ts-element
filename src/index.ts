@@ -11,7 +11,7 @@ const components = [
 // 函数形式
 const install = (app: App) => {
   components.forEach(component => {
-    app.component(component.name, component);
+    app.component(component.name as string, component);
   });
 };
 

@@ -10,6 +10,7 @@ import VueMacros from 'unplugin-vue-macros/vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import vueDevTools from 'vite-plugin-vue-devtools'
+import dts from 'vite-plugin-dts'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -21,6 +22,9 @@ export default defineConfig({
       },
     }),
     vueDevTools(),
+    dts({
+      tsconfigPath: './tsconfig.build.json'
+    })
   ],
   resolve: {
     alias: {
@@ -44,6 +48,7 @@ export default defineConfig({
         globals: {
           vue: 'Vue',
         },
+        // 表示导出模块已经是命名导出
         exports: 'named'
       },
     },

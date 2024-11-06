@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "main": "./dist/ts-element.umd.cjs",
   "module": "./dist/ts-element.js",
   "exports": {
@@ -46,6 +48,7 @@
     "typescript": "~5.4.0",
     "unplugin-vue-macros": "^2.9.5",
     "vite": "^5.3.1",
+    "vite-plugin-dts": "^4.3.0",
     "vite-plugin-vue-devtools": "^7.3.1",
     "vue-tsc": "^2.0.21"
   }

@@ -7,7 +7,7 @@ Collapse.install = (app: App) => {
 };
 
 CollapseItem.install = (app: App) => {
-  app.component(CollapseItem.name, CollapseItem);
+  app.component(CollapseItem.name as string, CollapseItem);
 };
 
 export default Collapse;
