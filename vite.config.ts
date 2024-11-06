@@ -49,7 +49,13 @@ export default defineConfig({
           vue: 'Vue',
         },
         // 表示导出模块已经是命名导出
-        exports: 'named'
+        exports: 'named',
+        // 定制静态资源 style.css名称
+        assetFileNames: (assetInfo) => {
+          return assetInfo.name === 'style.css'
+            ? 'index.css'
+            : assetInfo.name as string;
+        }
       },
     },
   }

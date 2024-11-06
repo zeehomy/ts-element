@@ -1,6 +1,14 @@
 import type { App, Plugin } from 'vue';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fas } from '@fortawesome/free-solid-svg-icons'
 import Button from './components/Button';
 import Collapse, { CollapseItem } from './components/Collapse';
+
+// 打包样式
+import './styles/index.css';
+
+// 初始化fontawesome
+library.add(fas);
 
 const components = [
   Button,
