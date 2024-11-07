@@ -6,6 +6,9 @@
   "files": [
     "dist"
   ],
+  "sideEffects": [
+    
+  ],
   "main": "./dist/umd/ts-element.umd.cjs",
   "module": "./dist/es/ts-element.js",
   "types": "./dist/types/index.d.ts",
@@ -25,13 +28,16 @@
   "scripts": {
     "dev": "vite",
     "build-native": "run-p type-check \"build-only {@}\" --",
-    "build": "run-p build-umd build-es",
+    "build0.9": "run-p build-umd build-es && npm run move-style",
+    "build": "npm run build-only && npm run move-style",
     "preview": "vite preview",
-    "build-only": "vite build",
+    "build-only0.9": "vite build",
+    "build-only": "run-p build-umd build-es",
     "build-umd": "vite build --config vite.umd.config.ts",
     "build-es": "vite build --config vite.es.config.ts",
     "type-check": "vue-tsc --build --force",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+    "move-style": "move-file dist/es/index.css dist/index.css"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
@@ -53,6 +59,7 @@
     "@vue/tsconfig": "^0.5.1",
     "eslint": "^8.57.0",
     "eslint-plugin-vue": "^9.23.0",
+    "move-file-cli": "^3.0.0",
     "npm-run-all2": "^6.2.0",
     "postcss-color-mix": "^1.1.0",
     "postcss-each": "^1.1.0",
@@ -63,6 +70,7 @@
     "vite": "^5.3.1",
     "vite-plugin-dts": "^4.3.0",
     "vite-plugin-vue-devtools": "^7.3.1",
+    "vue": "^3.4.29",
     "vue-tsc": "^2.0.21"
   }
 }
