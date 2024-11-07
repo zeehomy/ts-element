@@ -13,3 +13,12 @@
 ### vite config
 1. rollupOptions的external中需要添加vue，否则用户项目中会出现Cannot read properties of null (reading 'isCE')；
 2. 
+
+### npm
+1. npm login 要切回npm官方源（nrm或者npm config set registry https://registry.npmjs.org/）
+2. 连接可用的网络；
+3. npm whoami 验证账号是否登录成功；
+4. 语义化版本规则 https://semver.org/lang/zh-CN/
+5. 去掉配置项private: true,否则不能publish;
+6. 添加prepublishOnly命令，在发布前进行构建；
+6. npm publish --access=public 设置权限，默认是private，需要付费才能发布，这里设置为public；

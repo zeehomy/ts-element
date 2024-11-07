@@ -1,8 +1,20 @@
 {
-  "name": "ts-element",
-  "version": "0.0.0",
-  "private": true,
+  "name": "@zeehomy/element",
+  "version": "1.0.0",
+  "description": "A UI libirary based on Vue 3, Vite and Typescript.",
   "type": "module",
+  "author": "zeehomy",
+  "license": "MIT",
+  "keywords": [
+    "Component",
+    "UI",
+    "Vue3"
+  ],
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
   "files": [
     "dist"
   ],
@@ -37,7 +49,8 @@
     "build-es": "vite build --config vite.es.config.ts",
     "type-check": "vue-tsc --build --force",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
-    "move-style": "move-file dist/es/index.css dist/index.css"
+    "move-style": "move-file dist/es/index.css dist/index.css",
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
