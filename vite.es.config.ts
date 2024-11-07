@@ -61,7 +61,7 @@ export default defineConfig({
       //   '@fortawesome/free-solid-svg-icons',
       //   '@fortawesome/vue-fontawesome'
       // ],
-      external: externalDependenciesArr,
+      external: [...externalDependenciesArr, 'vue'],
       output: {
         // 移除为UMD服务的globals、exports: 'named'选项
         // 定制静态资源 style.css名称

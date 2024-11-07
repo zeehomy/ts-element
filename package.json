@@ -7,7 +7,8 @@
     "dist"
   ],
   "sideEffects": [
-    
+    "dist/index.css",
+    "./src/**/*.css"
   ],
   "main": "./dist/umd/ts-element.umd.cjs",
   "module": "./dist/es/ts-element.js",
@@ -22,8 +23,7 @@
     "./dist/": {
       "import": "./dist/",
       "require": "./dist/"
-    },
-    "./dist/index.css": "./dist/es/index.css"
+    }
   },
   "scripts": {
     "dev": "vite",
