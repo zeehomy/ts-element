@@ -11,7 +11,7 @@
 6. 
 
 ### vite config
-1. rollupOptions的external中需要添加vue，否则用户项目中会出现Cannot read properties of null (reading 'isCE')；
+1. rollupOptions的external中需要添加vue，并将vue从dependencies移到devDependencies，否则用户项目中会出现Cannot read properties of null (reading 'isCE')；
 2. 
 
 ### npm
